@@ -1,3 +1,10 @@
+      - name: 🔍 验证 Cloudflare 账户
+        working-directory: ./mail-worker
+        shell: bash
+        run: |
+          set -euo pipefail
+          pnpm wrangler whoami
+          
 name: 🚀 Deploy cloud-mail to Cloudflare Workers
 
 on:
